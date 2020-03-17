@@ -17,9 +17,10 @@ namespace BankAccount
             public int Id;
             public decimal Balance;
 
-            public BankAccount(int id)
+            public BankAccount(int id, decimal balance)
             {
                 this.id = id;
+                this.balance = balance;
             }
 
             public BankAccount()
@@ -45,7 +46,7 @@ namespace BankAccount
                 get { return this.balance; }
                 set { this.balance = value; }
             }
-
+            // ???
             internal void Withdraw(decimal v, decimal amount)
             {
                 throw new NotImplementedException();
@@ -116,12 +117,12 @@ namespace BankAccount
                     input = Console.ReadLine();
                 }
             }
-
+            // ???
             private static void Deposit(int v1, decimal v2, Dictionary<int, BankAccount> accounts)
             {
                 throw new NotImplementedException();
             }
-
+            // ???
             private static void Print(int id, Dictionary<int, BankAccount> accounts)
             {
                 if (!accounts.ContainsKey(id))
